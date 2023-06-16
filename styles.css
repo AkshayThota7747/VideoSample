@@ -48,10 +48,11 @@ body, html {
   .scriptWrapper {
     margin-bottom: 1em; /* Adjust the value as needed */
   }
-  
+
   #nextBtn {
     display: block;
     margin-top: 10px;
+    height: 40px;
     padding: 10px;
     background-color: #f44336;
     color: #fff;
@@ -62,6 +63,7 @@ body, html {
   
   #nextBtn:hover {
     background-color: #d32f2f;
+    height: 30px;
   }
   
   #nextBtn:active {

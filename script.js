@@ -1,46 +1,49 @@
 var videoScripts = [
     {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2n"
+      video: "x8ltexk"
     },
     {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2m"
+      video: "x8ltexj"
     },
     {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2n"
+      video: "x8ltexm"
     },
     {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2m"
+      video: "x8ltexn"
     },
     {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2n"
+      video: "x8ltexp"
     },
     {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2m"
+      video: "x8ltexo"
     },
     {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2n"
+      video: "x8ltexq"
     },
     {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2m"
-    },
-    {
-      src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2n"
-    },
-    {
-      src: "https://geo.dailymotion.com/player/xfm0t.js",
-      video: "x8lqe2m"
+      video: "x8ltexr"
     },
     // Add more video scripts as needed
   ];
+
+
+
+// https://dai.ly/x8ltexk
+// https://dai.ly/x8ltexj
+// https://dai.ly/x8ltexm
+// https://dai.ly/x8ltexn
+// https://dai.ly/x8ltexp
+// https://dai.ly/x8ltexo
+// https://dai.ly/x8ltexq
+// https://dai.ly/x8ltexr
   
   var videoList = document.getElementById("videoList");
   var nextBtn = document.getElementById("nextBtn");
@@ -62,10 +65,14 @@ var videoScripts = [
       var script = document.createElement("script");
       script.src = items[i].src;
       script.dataset.video = items[i].video;
+      script.addEventListener("click", function() {
+        openFullscreen(this);
+      });
   
       scriptWrapper.appendChild(script);
       item.appendChild(scriptWrapper);
       videoList.appendChild(item);
+      console.log("script" + script);
     }
   
     if (endIndex >= videoScripts.length) {
@@ -79,6 +86,13 @@ var videoScripts = [
     currentPage++;
     videoList.innerHTML = "";
     loadItems();
+  }
+  
+  function openFullscreen(element) {
+    var videoId = element.dataset.video;
+    var videoUrl = "https://www.dailymotion.com/embed/video/" + videoId;
+    var fullscreenWindow = window.open(videoUrl, "_blank");
+    fullscreenWindow.document.write('<iframe allowfullscreen src="' + videoUrl + '" style="width:100%; height:100%;"></iframe>');
   }
   
   loadItems();
