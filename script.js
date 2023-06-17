@@ -34,19 +34,9 @@ var videoScripts = [
     // Add more video scripts as needed
   ];
 
-
-
-// https://dai.ly/x8ltexk
-// https://dai.ly/x8ltexj
-// https://dai.ly/x8ltexm
-// https://dai.ly/x8ltexn
-// https://dai.ly/x8ltexp
-// https://dai.ly/x8ltexo
-// https://dai.ly/x8ltexq
-// https://dai.ly/x8ltexr
-  
   var videoList = document.getElementById("videoList");
   var nextBtn = document.getElementById("nextBtn");
+  var prevBtn = document.getElementById("prevBtn");
   var itemsPerPage = 5;
   var currentPage = 1;
   
@@ -72,7 +62,12 @@ var videoScripts = [
       scriptWrapper.appendChild(script);
       item.appendChild(scriptWrapper);
       videoList.appendChild(item);
-      console.log("script" + script);
+    }
+  
+    if (currentPage === 1) {
+      prevBtn.style.display = "none";
+    } else {
+      prevBtn.style.display = "block";
     }
   
     if (endIndex >= videoScripts.length) {
@@ -84,6 +79,12 @@ var videoScripts = [
   
   function nextPage() {
     currentPage++;
+    videoList.innerHTML = "";
+    loadItems();
+  }
+  
+  function prevPage() {
+    currentPage--;
     videoList.innerHTML = "";
     loadItems();
   }

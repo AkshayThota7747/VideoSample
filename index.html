@@ -14,9 +14,20 @@
 
   <div id="videoList"></div>
 
-  <div id="nextBtn" class="pagination">
-    <button onclick="nextPage()">Next</button>
+  <div class="pagination">
+    <button id="prevBtn" onclick="prevPage()">Previous</button>
+    <button id="nextBtn" onclick="nextPage()">Next</button>
   </div>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ47MWDG75"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BQ47MWDG75');
+</script>
 
   <script src="script.js"></script>
 </body>

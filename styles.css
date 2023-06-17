@@ -52,21 +52,60 @@ body, html {
   #nextBtn {
     display: block;
     margin-top: 10px;
-    height: 40px;
+    height: 80px;
+    width: 200px;
     padding: 10px;
-    background-color: #f44336;
-    color: #fff;
-    border: none;
+    position: relative;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    color: #000;
     border-radius: 4px;
     cursor: pointer;
+    
+    /* Centering styles */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    /* Text size */
+    font-size: 32px;
   }
   
+  
   #nextBtn:hover {
-    background-color: #d32f2f;
-    height: 30px;
+    background-color: #e6e6e6;
+    height: 80px;
+    width: max-content;
   }
   
   #nextBtn:active {
-    background-color: #b71c1c;
+    background-color: #e6e6e6;
+  }
+  
+
+  #prevBtn {
+    display: none;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    color: #333;
+    height : 80px;
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+  
+    /* Centering styles */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 32px;
+  }
+  
+  #prevBtn:hover {
+    background-color: #e6e6e6;
   }
   
