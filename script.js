@@ -1,5 +1,62 @@
 var videoScripts = [
     {
+    src: "https://geo.dailymotion.com/player/xfm0t.js",
+    video: "x8luf06"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf07"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf09"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf0c"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf0f"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf0a"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf0e"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf0b"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf0d"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luf08"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lurat"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lurar"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lurau"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8luras"
+    },
+
+    {
       src: "https://geo.dailymotion.com/player/xfm0t.js",
       video: "x8ltexk"
     },
@@ -33,11 +90,9 @@ var videoScripts = [
     },
     // Add more video scripts as needed
   ];
-
+  
   var videoList = document.getElementById("videoList");
-  var nextBtn = document.getElementById("nextBtn");
-  var prevBtn = document.getElementById("prevBtn");
-  var itemsPerPage = 5;
+  var itemsPerPage = 25;
   var currentPage = 1;
   
   function loadItems() {
@@ -63,30 +118,6 @@ var videoScripts = [
       item.appendChild(scriptWrapper);
       videoList.appendChild(item);
     }
-  
-    if (currentPage === 1) {
-      prevBtn.style.display = "none";
-    } else {
-      prevBtn.style.display = "block";
-    }
-  
-    if (endIndex >= videoScripts.length) {
-      nextBtn.style.display = "none";
-    } else {
-      nextBtn.style.display = "block";
-    }
-  }
-  
-  function nextPage() {
-    currentPage++;
-    videoList.innerHTML = "";
-    loadItems();
-  }
-  
-  function prevPage() {
-    currentPage--;
-    videoList.innerHTML = "";
-    loadItems();
   }
   
   function openFullscreen(element) {
