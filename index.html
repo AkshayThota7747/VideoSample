@@ -4,6 +4,11 @@
   <meta name='dailymotion-domain-verification' content='dmvnrd67j77x4zm76' />
   <title>Kodi Pandhalu</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+        <!-- Add loader container -->
+        <div class="loader-container" id="loader-container">
+          <!-- Loader div -->
+          <div class="loader" id="loader"></div>
+        </div>
 </head>
 <body>
   <div class="header">
@@ -23,6 +28,15 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ47MWDG75"></script>
 <script>
+
+      // Show loader
+      document.getElementById("loader-container").style.display = "flex";
+
+      // Hide loader after 3 seconds
+      setTimeout(function() {
+        document.getElementById("loader-container").style.display = "none";
+      }, 7000);
+
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
