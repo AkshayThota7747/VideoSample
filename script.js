@@ -1,4 +1,65 @@
 var videoScripts = [
+
+// Day 1
+    {
+    src: "https://geo.dailymotion.com/player/xfm0t.js",
+    video: "x8lqe2m"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lqe2n"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lqe2o"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvlcm"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvk3y"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lwnbl"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvlco"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvnmz"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvnn0"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvk3v"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvlcn"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvk3x"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lurau"
+    },
+    {
+        src: "https://geo.dailymotion.com/player/xfm0t.js",
+        video: "x8lvk3u"
+    },
+
+//day 2
+
     {
     src: "https://geo.dailymotion.com/player/xfm0t.js",
     video: "x8luf06"
@@ -92,7 +153,7 @@ var videoScripts = [
   ];
   
   var videoList = document.getElementById("videoList");
-  var itemsPerPage = 25;
+  var itemsPerPage = 50;
   var currentPage = 1;
   
   function loadItems() {
